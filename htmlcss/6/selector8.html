@@ -1,51 +1,35 @@
 <!DOCTYPE html>
-<!-- src/main/webapp/6/selector8.html -->
+<!--  src/main/webapp/6/selector8.html -->
 <html>
 <head>
 <meta charset="UTF-8">
 <title>상태 선택자</title>
 <style type="text/css">
-ul {
-	overflow: hidden;	/* ul 태그의 외부 내용을 안보이도록 설정 */
-}
-
-li {
-	list-style-type: none;
-	float: left;		/* 왼쪽부터 배치. 왼쪽 정렬 */
-	padding: 5px;
-}
-
-li:nth-child(3n) {
-	background-color: #5AAEFF;
-}
-
-li:nth-child(3n+1) {
-	background-color: #00FF00;
-}
-
-li:nth-child(3n+2) {
-	background-color: #0000FF;
-}
-
-li:first-child {
-	border-radius: 20px 0 0 20px;
-}
-
-li:last-child {
-	border-radius: 0 20px 20px 0;
-}
+   ul {overflow : hidden;} /*ul 태그의 외부 내용을 안보이도록 설정 */
+   /* float:left; : 왼쪽부터 배치. 왼쪽 정렬*/
+   li {list-style-type: none; float:left; padding:5px;}
+   /*
+     li:nth-child(3n) : li태그 중 3의 배수번째인 태그 선택
+     li:nth-child(3n+1) : li태그 중 순서가 3으로 나눈 나머지가 1인 태그 선택
+     li:nth-child(3n+2) : li태그 중 순서가 3으로 나눈 나머지가 2인 태그 선택
+     li:first-child : li 태그 중 첫번째 태그 선택
+     li:last-child : li 태그 중 마지막 태그 선택
+   */
+/*   
+   li:nth-child(3n) {background-color: #5AAEFF; }
+   li:nth-child(3n+1) {background-color: #00FF00; }
+   li:nth-child(3n+2) {background-color: #0000FF; }
+*/   
+   li:nth-child(even) {background-color: #5AAEFF; }
+   li:nth-child(odd) {background-color: #00FF00; }
+   li:first-child { border-radius: 20px 0 0 20px; }
+   li:last-child { border-radius: 0 20px 20px 0; }
 </style>
 </head>
 <body>
-	<ul>
-		<li>첫번째</li>
-		<li>두번째</li>
-		<li>세번째</li>
-		<li>네번째</li>
-		<li>다섯번째</li>
-		<li>여섯번째</li>
-		<li>일곱번째</li>
-		<li>여덟번째</li>
-	</ul>
+<ul>
+  <li>첫번째</li><li>두번째</li><li>세번째</li><li>네번째</li>
+  <li>다번째</li><li>여섯번째</li><li>일곱번째</li><li>여덟번째</li>
+</ul>
 </body>
 </html>
